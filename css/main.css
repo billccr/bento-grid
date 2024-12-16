@@ -75,9 +75,9 @@ textarea {
   resize: vertical;
 }
 
-/* ********************************************
-# my additional resets
-******************************************** */
+/* ==========================================================================
+	my additional resets
+   ========================================================================== */
 /* make sure padding applied to elements is added within their calculated dimensions */
 *,
 *:after,
@@ -100,11 +100,30 @@ img {
 /* ********************************************
 # variables
 ******************************************** */
+/* ********************************************
+# typography
+******************************************** */
+.dm-sans-400 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-sans-500 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 /* ==========================================================================
 	 primary styles -- small device
    ========================================================================== */
 body {
   min-height: 100vh;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
 }
 
 .attribution {

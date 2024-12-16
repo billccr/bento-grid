@@ -6,8 +6,12 @@
 
 @use 'abstracts/variables' as v;
 
+@use 'base/typography';
+
 body {
 	min-height: 100vh;
+	font-family: "DM Sans", sans-serif;
+	font-size: 16px;
 }
 
 .attribution {
