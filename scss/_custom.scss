@@ -1,7 +1,19 @@
 /* ==========================================================================
-	 Author's custom styles
+	 primary styles -- small device
    ========================================================================== */
 
 @use 'base/resets';
 
-@use 'abstracts/variables';
+@use 'abstracts/variables' as v;
+
+body {
+	min-height: 100vh;
+}
+
+.attribution {
+	font-size: 11px; text-align: center;
+	a {
+		color: hsl(228, 45%, 44%);
+	}
+}
+
