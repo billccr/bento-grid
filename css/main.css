@@ -252,25 +252,28 @@ img {
 /* ********************************************
 # typography
 ******************************************** */
-.dm-sans-400 {
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
+@font-face {
+  font-family: "DM Sans";
   font-weight: 400;
-  font-style: normal;
+  src: url("../assets/fonts/static/DMSans-Regular.ttf") format("truetype");
 }
-
-.dm-sans-500 {
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
+@font-face {
+  font-family: "DM Sans";
   font-weight: 500;
-  font-style: normal;
+  src: url("../assets/fonts/static/DMSans-Medium.ttf") format("truetype");
 }
-
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-style: italic;
+  src: url("../assets/fonts/static/DMSans-MediumItalic.ttf") format("truetype");
+}
 /* ==========================================================================
 	 primary styles -- small device
    ========================================================================== */
 body {
   min-height: 100vh;
+  font-weight: 400;
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
 }
