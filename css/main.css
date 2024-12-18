@@ -268,30 +268,77 @@ img {
   font-style: italic;
   src: url("../assets/fonts/static/DMSans-MediumItalic.ttf") format("truetype");
 }
+.italic {
+  font-style: italic;
+}
+
+.text-inverse {
+  color: hsl(0, 0%, 100%);
+}
+
 /* ==========================================================================
 	 primary styles -- small device
    ========================================================================== */
 body {
   min-height: 100vh;
+  display: grid;
+  grid-column: 1fr;
+  grid-gap: 2rem;
   font-weight: 400;
   font-family: "DM Sans", sans-serif;
-  font-size: 16px;
-  padding: 1rem;
+  font-size: 18px;
+  padding: 2rem 1rem;
 }
 
 h1 {
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 2.8rem;
+  line-height: 0.85em;
+  margin-bottom: 0.5em;
+}
+h1 .highlight {
+  color: hsl(39, 100%, 71%);
 }
 
 h2 {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.5rem;
+  letter-spacing: -0.05em;
+  line-height: 1em;
 }
 
 .card {
-  margin-bottom: 1.5rem;
   border: 1px solid black;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-gap: 1rem;
+}
+.card.var-1 {
+  background-color: hsl(256, 67%, 59%);
+  justify-items: center;
+  text-align: center;
+}
+.card.var-2 {
+  background-color: hsl(254, 88%, 90%);
+}
+.card.var-3 {
+  background-color: hsl(39, 100%, 71%);
+  align-items: left;
+}
+.card.var-4 {
+  background-color: hsl(31, 66%, 93%);
+}
+.card.var-5 {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.card.var-1 img {
+  max-width: 65%;
+}
+
+.card.var-4 .italic {
+  color: hsl(256, 67%, 59%);
 }
 
 .attribution {

@@ -10,29 +10,71 @@
 
 body {
 	min-height: 100vh;
+	display: grid;
+	grid-column: 1fr;
+	grid-gap: 2rem;
 	font-weight: 400;
 	font-family: 'DM Sans', sans-serif;
-	font-size: 16px;
-	padding: 1rem;
+	font-size: 18px;
+	padding: 2rem 1rem;
 }
 
 h1 {
 	font-weight: 500;
-	font-size: 2rem;
+	font-size: 2.8rem;
+	line-height: .85em;
+	margin-bottom: .5em;
+
+	.highlight {
+		color: v.$yellow-dark;
+	}
 }
 
 h2 {
-	font-weight: 400;
+	font-weight: 500;
 	font-size: 1.5rem;
+	letter-spacing: -.05em;
+	line-height: 1em;
 }
 
 .card {
-	margin-bottom: 1.5rem;
 	border: 1px solid black;
+	padding: 1rem;
+	border-radius: .5rem;
+	display: grid;
+	grid-gap: 1rem;
+
+	&.var-1 {
+		background-color: v.$purple-dark;
+		justify-items: center;
+		text-align: center;
+	}
+	&.var-2 {
+		background-color: v.$purple-light;
+	}
+	&.var-3 {
+		background-color: v.$yellow-dark;
+		align-items: left;
+	}
+	&.var-4 {
+		background-color: v.$yellow-light;
+	}
+	&.var-5 {
+		background-color: v.$white;
+	}
+}
+
+.card.var-1 img {
+	max-width: 65%;
+}
+
+.card.var-4 .italic {
+	color: v.$purple-dark;
 }
 
 .attribution {
 	font-size: 11px; text-align: center;
+
 	a {
 		color: hsl(228, 45%, 44%);
 	}

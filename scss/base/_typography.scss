@@ -1,6 +1,7 @@
 /* ********************************************
 # typography
 ******************************************** */
+@use '../abstracts/variables' as v;
 
 @font-face {
 	font-family: 'DM Sans';
@@ -19,4 +20,12 @@
 	font-weight: 500;
 	font-style: italic;
 	src: url('../assets/fonts/static/DMSans-MediumItalic.ttf') format('truetype');
+}
+
+.italic {
+	font-style: italic;
+}
+
+.text-inverse {
+	color: v.$white;
 }
