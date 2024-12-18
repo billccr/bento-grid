@@ -10,13 +10,17 @@
 
 body {
 	min-height: 100vh;
-	display: grid;
-	grid-column: 1fr;
-	grid-gap: 2rem;
 	font-weight: 400;
 	font-family: 'DM Sans', sans-serif;
 	font-size: 18px;
 	padding: 2rem 1rem;
+	background-color: v.$grey-light;
+}
+
+main {
+	display: grid;
+	grid-column: 1fr;
+	grid-gap: 1.9rem;
 }
 
 h1 {
@@ -30,7 +34,18 @@ h1 {
 	}
 }
 
+h1.var-1 {
+	margin-top: 1rem;
+}
+
 h2 {
+	font-weight: 500;
+	font-size: 2rem;
+	letter-spacing: -.05em;
+	line-height: 1em;
+}
+
+h3 {
 	font-weight: 500;
 	font-size: 1.5rem;
 	letter-spacing: -.05em;
@@ -38,8 +53,7 @@ h2 {
 }
 
 .card {
-	border: 1px solid black;
-	padding: 1rem;
+	padding: 1rem 1rem;
 	border-radius: .5rem;
 	display: grid;
 	grid-gap: 1rem;
@@ -60,23 +74,45 @@ h2 {
 		background-color: v.$yellow-light;
 	}
 	&.var-5 {
-		background-color: v.$white;
+// 		background-color: v.$white;
 	}
 }
 
 .card.var-1 img {
-	max-width: 65%;
+	max-width: 75%;
 }
 
-.card.var-4 .italic {
+.card.var-3 img {
+	max-width: 75%;
+	align-self: left;
+}
+
+.card.var-4 img,
+.card.var-5 img {
+	max-width: 60%;
+	align-self: left;
+}
+
+.card.graded {		// this one needs to have gradient bg *****************
+// 	background-color: v.$grey-light;
+	background: radial-gradient(v.$grey-v-light, white);
+	padding: 1rem 1rem;
+	img {
+		max-width: 100%;
+	}
+}
+
+.card.var-4 em {
 	color: v.$purple-dark;
 }
 
 .attribution {
-	font-size: 11px; text-align: center;
+	font-size: 11px;
+	text-align: center;
+	padding-top: 1.5em;
 
 	a {
-		color: hsl(228, 45%, 44%);
+		color: v.$purple-dark;
 	}
 }
 
