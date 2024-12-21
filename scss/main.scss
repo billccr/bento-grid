@@ -4,8 +4,9 @@
 
 @use 'custom';	// calls _resets.scss, _variables.scss, _typography.scss
 				// styles for mobile-first presentation
-@use 'base/helpers';
 
 @use 'layout/media-queries';  // for sizes larger than mobile
+
+@use 'base/helpers';
 
 @use 'print';

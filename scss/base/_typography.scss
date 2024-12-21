@@ -26,7 +26,21 @@
 	font-style: italic;
 }
 
+.card.var-1.spot p {
+	color: v.$yellow-v-light;
+}
+
+.card.var-1.graph h2 {
+	padding: 0rem 1.5rem;
+}
+
+.card.var-2 p {
+	text-align: center;
+}
+
 .xl {
+	display: block;
+	padding-bottom: .75rem;
 	font-size: 3rem;
 	font-weight: 500;
 	letter-spacing: -.05em;
@@ -34,4 +48,18 @@
 
 .text-inverse {
 	color: v.$white;
+}
+
+.card.var-4 em {
+	color: v.$purple-dark;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	padding-top: 1.5em;
+
+	a {
+		color: v.$purple-dark;
+	}
 }

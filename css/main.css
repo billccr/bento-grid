@@ -272,7 +272,21 @@ img {
   font-style: italic;
 }
 
+.card.var-1.spot p {
+  color: hsl(31, 66%, 85%);
+}
+
+.card.var-1.graph h2 {
+  padding: 0rem 1.5rem;
+}
+
+.card.var-2 p {
+  text-align: center;
+}
+
 .xl {
+  display: block;
+  padding-bottom: 0.75rem;
   font-size: 3rem;
   font-weight: 500;
   letter-spacing: -0.05em;
@@ -280,6 +294,19 @@ img {
 
 .text-inverse {
   color: hsl(0, 0%, 100%);
+}
+
+.card.var-4 em {
+  color: hsl(256, 67%, 59%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding-top: 1.5em;
+}
+.attribution a {
+  color: hsl(256, 67%, 59%);
 }
 
 /* ==========================================================================
@@ -319,7 +346,7 @@ h2 {
   font-weight: 500;
   font-size: 2rem;
   letter-spacing: -0.05em;
-  line-height: 1em;
+  line-height: 0.9em;
 }
 
 h3 {
@@ -329,6 +356,9 @@ h3 {
   line-height: 1em;
 }
 
+/* ********************************************
+# card cells
+******************************************** */
 .card {
   padding: 1rem 1rem;
   border-radius: 0.5rem;
@@ -340,29 +370,43 @@ h3 {
   justify-items: center;
   text-align: center;
 }
+.card.var-1.spot {
+  padding: 2.5rem 1rem;
+  grid-gap: 1.5rem;
+}
+.card.var-1.graph {
+  padding: 1.5rem 1rem;
+}
 .card.var-2 {
   background-color: hsl(254, 88%, 90%);
+  justify-items: center;
+  padding: 2rem 1rem;
 }
 .card.var-3 {
   background-color: hsl(39, 100%, 71%);
-  align-items: left;
-  max-height: 13.6rem;
-  overflow-y: clip;
+  justify-items: left;
 }
 .card.var-4 {
   background-color: hsl(31, 66%, 93%);
 }
-.card.var-1.spot-1 {
-  padding: 2.5rem 1rem;
-  grid-gap: 1.5rem;
+.card.var-5 {
+  background-color: hsl(0, 0%, 100%);
 }
 
-.card.var-1.spot-1 img {
+/* ********************************************
+# image placement
+******************************************** */
+.card.var-1.spot img {
   max-width: 60%;
 }
 
-.card.var-1 img {
-  max-width: 75%;
+.card.var-1.graph img {
+  max-width: 74%;
+  margin-bottom: 1rem;
+}
+
+.card.var-2 img {
+  margin: 0.5rem 0 0.3rem;
 }
 
 .card.var-3 img {
@@ -370,14 +414,24 @@ h3 {
   align-self: left;
 }
 
-.card.var-4 img,
-.card.var-5 img {
+.card.var-3.clipped {
+  max-height: 13.6rem;
+  overflow-y: clip;
+}
+
+.card.var-4 img {
   max-width: 60%;
   align-self: left;
 }
 
+.card.var-5 img {
+  max-width: 58%;
+  padding: 0.5rem;
+  align-self: left;
+}
+
 .card.graded {
-  background: radial-gradient(hsl(280, 57%, 99%), white);
+  background: radial-gradient(hsl(280, 57%, 99%), hsl(0, 0%, 100%));
   box-shadow: inset 0rem 1rem 3rem hsl(0, 0%, 100%);
   padding: 1rem 1rem;
 }
@@ -385,19 +439,16 @@ h3 {
   max-width: 100%;
 }
 
-.card.var-4 em {
-  color: hsl(256, 67%, 59%);
+/* ==========================================================================
+   Media Queries for Responsive Design.
+   These override the primary ('mobile first') styles.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
 }
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  padding-top: 1.5em;
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
 }
-.attribution a {
-  color: hsl(256, 67%, 59%);
-}
-
 /* ==========================================================================
 	 H5BP Helper classes
    ========================================================================== */
@@ -474,16 +525,6 @@ h3 {
   clear: both;
 }
 
-/* ==========================================================================
-   Media Queries for Responsive Design.
-   These override the primary ('mobile first') styles.
-   ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
 /*  ==========================================================================
 	Print styles.
 	Inlined to avoid the additional HTTP request:

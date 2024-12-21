@@ -43,7 +43,7 @@ h2 {
 	font-weight: 500;
 	font-size: 2rem;
 	letter-spacing: -.05em;
-	line-height: 1em;
+	line-height: .9em;
 }
 
 h3 {
@@ -52,6 +52,10 @@ h3 {
 	letter-spacing: -.05em;
 	line-height: 1em;
 }
+
+/* ********************************************
+# card cells
+******************************************** */
 
 .card {
 	padding: 1rem 1rem;
@@ -63,36 +67,48 @@ h3 {
 		background-color: v.$purple-dark;
 		justify-items: center;
 		text-align: center;
+
+		&.spot {
+			padding: 2.5rem 1rem;
+			grid-gap: 1.5rem;
+		}
+		&.graph {
+			padding: 1.5rem 1rem;
+		}
 	}
+
 	&.var-2 {
 		background-color: v.$purple-light;
+		justify-items: center;
+		padding: 2rem 1rem;
 	}
-	&.var-3 {		// this one fixes 3rd card but breaks last (var-3)
+	&.var-3 {
 		background-color: v.$yellow-dark;
-		align-items: left;
-		max-height: 13.6rem;
-		overflow-y: clip;
+		justify-items: left;
 	}
 	&.var-4 {
 		background-color: v.$yellow-light;
 	}
 	&.var-5 {
-// 		background-color: v.$white;
+		background-color: v.$white;
 	}
 }
 
-.card.var-1.spot-1 {
-	padding: 2.5rem 1rem;
-	grid-gap: 1.5rem;
-}
+/* ********************************************
+# image placement
+******************************************** */
 
-.card.var-1.spot-1 img {
+.card.var-1.spot img {
 	max-width: 60%;
 }
 
+.card.var-1.graph img {
+	max-width: 74%;
+	margin-bottom: 1rem;
+}
 
-.card.var-1 img {
-	max-width: 75%;
+.card.var-2 img {
+	margin: .5rem 0 .3rem;
 }
 
 .card.var-3 img {
@@ -100,33 +116,28 @@ h3 {
 	align-self: left;
 }
 
-.card.var-4 img,
-.card.var-5 img {
+.card.var-3.clipped {
+	max-height: 13.6rem;
+	overflow-y: clip;
+}
+
+.card.var-4 img {
 	max-width: 60%;
 	align-self: left;
 }
 
-.card.graded {		// this one needs to have gradient bg *****************
-// 	background-color: v.$grey-light;
-	background: radial-gradient(v.$grey-v-light, white);
+.card.var-5 img {
+	max-width: 58%;
+	padding: .5rem;
+	align-self: left;
+}
+
+.card.graded {
+	background: radial-gradient(v.$grey-v-light, v.$white);
 	box-shadow: inset 0rem 1rem 3rem v.$white;
 	padding: 1rem 1rem;
 	img {
 		max-width: 100%;
-	}
-}
-
-.card.var-4 em {
-	color: v.$purple-dark;
-}
-
-.attribution {
-	font-size: 11px;
-	text-align: center;
-	padding-top: 1.5em;
-
-	a {
-		color: v.$purple-dark;
 	}
 }
 
