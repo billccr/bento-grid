@@ -64,26 +64,25 @@ h3 {
 	display: grid;
 	grid-gap: .9rem;
 
-	&.var-1 {
+	&.var1.spot {
 		background-color: v.$purple-dark;
 		justify-items: center;
 		text-align: center;
-
-		&.spot {
-			padding: 2.5rem 1rem;
-			grid-gap: 1.5rem;
-		}
-		&.graph {
-			padding: 1.5rem 1rem;
-		}
+		padding: 2.5rem 1rem;
+		grid-gap: 1.5rem;
 	}
-
-	&.var-2 {
+	&.var1.graph {
+		background-color: v.$purple-dark;
+		justify-items: center;
+		text-align: center;
+		padding: 1.5rem 1rem;
+	}
+	&.var2 {
 		background-color: v.$purple-light;
 		justify-items: center;
 		padding: 2rem 1rem;
 	}
-	&.var-3 {
+	&.var3 {
 		background-color: v.$yellow-dark;
 		justify-items: left;
 
@@ -92,10 +91,10 @@ h3 {
 			overflow-y: clip;
 		}
 	}
-	&.var-4 {
+	&.var4 {
 		background-color: v.$yellow-light;
 	}
-	&.var-5 {
+	&.var5 {
 		background-color: v.$white;
 	}
 }
@@ -104,35 +103,35 @@ h3 {
 # image placement
 ******************************************** */
 
-.card.var-1.spot img {
+.card.var1.spot img {
 	max-width: 60%;
 }
 
-.card.var-1.graph img {
+.card.var1.graph img {
 	max-width: 74%;
 	margin-bottom: 1rem;
 }
 
-.card.var-2 img {
+.card.var2 img {
 	margin: .5rem 0 .3rem;
 }
 
-.card.var-3.clipped img {
+.card.var3.clipped img {
 	max-width: 70%;
 	align-self: left;
 }
 
-.card.var-3.AI img {
+.card.var3.AI img {
 	max-width: 75%;
 	align-self: left;
 }
 
-.card.var-4 img {
+.card.var4 img {
 	max-width: 64%;
 	align-self: left;
 }
 
-.card.var-5 img {
+.card.var5 img {
 	max-width: 58%;
 	padding: .5rem;
 	align-self: left;

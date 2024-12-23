@@ -3,8 +3,70 @@
    These override the primary ('mobile first') styles.
    ========================================================================== */
 
+@use '../abstracts/_variables' as v;
+
 @media only screen and (min-width: 35em) {
 	/* Style adjustments for viewports that meet the condition */
+
+	main {
+		max-height: 100vh;
+		max-width: 80%;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(10, 1fr);
+		grid-template-areas:
+			"a c c h"
+			"a c c h"
+			"a c c h"
+			"a c c h"
+			"a d f h"
+			"b d f h"
+			"b d f h"
+			"b e g g"
+			"b e g g"
+			"b e g g";
+	}
+
+	.card {
+		display: grid;
+	}
+
+	.card.var4 {
+		grid-area: a;
+	}
+	.card.AI {
+		grid-area: b;
+	}
+	.card.spot {
+		grid-area: c;
+	}
+	.card.graded {
+		grid-area: d;
+	}
+	.card.xl {
+		grid-area: e;
+	}
+	.card.clipped {
+		grid-area: f;
+	}
+	.card.graph {
+		grid-area: g;
+	}
+	.card.var2 {
+		grid-area: h;
+	}
+
+	.card.var1.graph {
+
+		img {
+			max-width: 40%;
+		}
+		h2 {
+			display: inline-block;
+		}
+	}
+
 }
 
 @media print,
