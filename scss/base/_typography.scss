@@ -24,7 +24,7 @@
 
 
 p {
-	line-height: 1em;
+	line-height: 1.1em;
 }
 
 .card em {
@@ -41,6 +41,7 @@ p {
 
 .card.var2 p {
 	text-align: center;
+	padding: 0 1em;
 }
 
 .xl {
@@ -53,6 +54,13 @@ p {
 
 .text-inverse {
 	color: v.$white;
+}
+
+.card.var3.AI {
+	h2 {
+		margin-top: .5rem;
+		margin-bottom: 1.5rem;
+	}
 }
 
 .card.var4 em {

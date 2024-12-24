@@ -43,7 +43,11 @@ h2 {
 	font-size: 2rem;
 	letter-spacing: -.05em;
 	line-height: .9em;
-	margin: .5rem 0rem;
+// 	margin: .5rem 0rem;
+}
+
+.card.quicker h2 {
+	margin: 0.8rem 0rem 0.5rem;
 }
 
 h3 {
@@ -52,6 +56,9 @@ h3 {
 	letter-spacing: -.05em;
 	line-height: 1em;
 	margin-bottom: .9rem;
+	&.tight {
+		margin-bottom: 0rem;
+	}
 }
 
 /* ********************************************
@@ -75,6 +82,7 @@ h3 {
 	&.var2 {
 		background-color: v.$purple-light;
 		padding: 2rem 1rem;
+		text-align: center;
 	}
 	&.var3 {
 		background-color: v.$yellow-dark;
@@ -93,7 +101,7 @@ h3 {
 }
 
 /* ********************************************
-# image placement
+# image placement & sizing
 ******************************************** */
 
 .card.var1.spot img {
@@ -101,12 +109,12 @@ h3 {
 }
 
 .card.var1.grow img {
-	max-width: 74%;
-	margin-bottom: 1rem;
+	max-width: 73%;
+	margin-bottom: 2.2rem;
 }
 
 .card.var2.schedule img {
-	margin: .5rem 0 .3rem;
+	margin: .5rem 0 1rem;
 }
 
 .card.var3.clipped img {
@@ -114,16 +122,21 @@ h3 {
 }
 
 .card.var3.AI img {
-	max-width: 75%;
+	max-width: 74%;
 }
 
 .card.var4 img {
 	max-width: 64%;
+	margin: 1rem 1rem 0.8rem;
 }
 
 .card.var5 img {
 	width: 58%;
 	padding: .5rem 0rem;
+}
+
+.card.var5.trio img {
+	margin-top: 1rem;
 }
 
 .card.var5.graded {
