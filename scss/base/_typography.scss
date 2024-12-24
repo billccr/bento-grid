@@ -22,6 +22,11 @@
 	src: url('../assets/fonts/static/DMSans-MediumItalic.ttf') format('truetype');
 }
 
+
+p {
+	line-height: 1em;
+}
+
 .card em {
 	font-style: italic;
 }
@@ -30,7 +35,7 @@
 	color: v.$yellow-v-light;
 }
 
-.card.var1.graph h2 {
+.card.var1.grow h2 {
 	padding: 0rem 1.5rem;
 }
 

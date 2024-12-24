@@ -5,7 +5,7 @@
 
 @use '../abstracts/_variables' as v;
 
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 40rem) {
 	/* Style adjustments for viewports that meet the condition */
 
 	main {
@@ -29,7 +29,7 @@
 	}
 
 	.card {
-		display: grid;
+		display: block;
 	}
 
 	.card.var4 {
@@ -50,22 +50,39 @@
 	.card.clipped {
 		grid-area: f;
 	}
-	.card.graph {
+	.card.grow {
 		grid-area: g;
 	}
-	.card.var2 {
+	.card.schedule {
 		grid-area: h;
 	}
 
-	.card.var1.graph {
-
-		img {
-			max-width: 40%;
-		}
-		h2 {
-			display: inline-block;
-		}
+	// bottom left card
+	.card.var3.AI img {
+		max-width: 100%;
 	}
+
+	// bottom right card
+	.card.var1.grow img {
+		max-width: 35%;
+		display: block;
+		float: left;
+	}
+	.card.var1.grow h2 {
+		display: block;
+// 		padding: 0rem 1.5rem;
+		float: right;
+		max-width: 19rem;
+	}
+
+	.card.var3.clipped img {
+		max-width: 100%;
+	}
+
+	.card.schedule img {
+		width: 100%;
+	}
+
 
 }
 

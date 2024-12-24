@@ -27,7 +27,7 @@ h1 {
 	font-weight: 500;
 	font-size: 2.8rem;
 	line-height: .85em;
-	margin-bottom: .5em;
+	margin-bottom: 1.5rem;
 
 	.highlight {
 		color: v.$yellow-dark;
@@ -35,7 +35,6 @@ h1 {
 }
 
 h1.text-inverse {
-	margin-bottom: 0rem;
 	line-height: .95em;
 }
 
@@ -52,6 +51,7 @@ h3 {
 	font-size: 1.6rem;
 	letter-spacing: -.05em;
 	line-height: 1em;
+	margin-bottom: .9rem;
 }
 
 /* ********************************************
@@ -61,30 +61,23 @@ h3 {
 .card {
 	padding: 1rem 1.3rem;
 	border-radius: .5rem;
-	display: grid;
-	grid-gap: .9rem;
 
 	&.var1.spot {
 		background-color: v.$purple-dark;
-		justify-items: center;
 		text-align: center;
 		padding: 2.5rem 1rem;
-		grid-gap: 1.5rem;
 	}
-	&.var1.graph {
+	&.var1.grow {
 		background-color: v.$purple-dark;
-		justify-items: center;
 		text-align: center;
 		padding: 1.5rem 1rem;
 	}
 	&.var2 {
 		background-color: v.$purple-light;
-		justify-items: center;
 		padding: 2rem 1rem;
 	}
 	&.var3 {
 		background-color: v.$yellow-dark;
-		justify-items: left;
 
 		&.clipped {
 			max-height: 13.6rem;
@@ -107,42 +100,38 @@ h3 {
 	max-width: 60%;
 }
 
-.card.var1.graph img {
+.card.var1.grow img {
 	max-width: 74%;
 	margin-bottom: 1rem;
 }
 
-.card.var2 img {
+.card.var2.schedule img {
 	margin: .5rem 0 .3rem;
 }
 
 .card.var3.clipped img {
 	max-width: 70%;
-	align-self: left;
 }
 
 .card.var3.AI img {
 	max-width: 75%;
-	align-self: left;
 }
 
 .card.var4 img {
 	max-width: 64%;
-	align-self: left;
 }
 
 .card.var5 img {
-	max-width: 58%;
-	padding: .5rem;
-	align-self: left;
+	width: 58%;
+	padding: .5rem 0rem;
 }
 
-.card.graded {
+.card.var5.graded {
 	background: radial-gradient(v.$grey-v-light, v.$white);
 	box-shadow: inset 0rem 1rem 3rem v.$white;
 	padding: 1rem 1rem;
 	img {
-		max-width: 100%;
+		width: 100%;
 	}
 }
 
