@@ -16,7 +16,7 @@
 
 
 	main {
- 		height: 80vh;		// need to work this out
+//  		height: 80vh;		// need to work this out
 		max-width: 70rem;
 		margin: 0 auto;
 		display: grid;
@@ -37,7 +37,7 @@
 	}
 
 	.card {
-		padding: 1.5rem 1rem 1rem;
+		padding: 1.5rem 1.5rem 1rem;
 	}
 
 	.card.var4 {
@@ -99,6 +99,20 @@
 		width: 100%;
 	}
 
+	.card.var5.graded {
+// 		background: radial-gradient(v.$grey-v-light, v.$white);
+// 		box-shadow: inset 0rem 1rem 3rem v.$white;
+//		padding: 1rem 1rem;
+		overflow-x: hidden;
+		img {
+			object-fit: cover;
+			object-position: left top;
+// 			width: 20rem;
+			height: 5.2rem !important;
+		}
+	}
+
+
 
 	h1.text-inverse {
 		font-weight: 500;
@@ -107,6 +121,18 @@
 		margin-bottom: 1.5rem;
 		letter-spacing: -0.05em;
 	}
+
+	h3 {
+		font-weight: 500;
+		font-size: 1.95rem;
+		line-height: .9em;
+		padding-right: 2rem;
+		margin-bottom: .9rem;
+// 		&.tight {
+// 			margin-bottom: 0rem;
+// 		}
+	}
+
 
 }
 
