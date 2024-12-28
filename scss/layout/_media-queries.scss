@@ -14,10 +14,15 @@
 // 	}
 
 
+	body {
+		height: 100vh;
+		padding: 8vh 0;
+	}
+
 	main {
-//  		height: 80vh;		// need to work this out
+ 		height: 80vh;
 		max-width: 70rem;
-		margin: 0 auto;
+		margin: auto;
 		display: grid;
 		grid-gap: 1.9rem;
 		grid-template-columns: repeat(4, 1fr);
@@ -78,16 +83,19 @@
 	}
 
 	// bottom right card
-	.card.var1.grow img {
-		max-width: 35%;
-		display: block;
-		float: left;
-	}
-	.card.var1.grow h2 {
-		display: block;
-// 		padding: 0rem 1.5rem;
-		float: right;
-		max-width: 19rem;
+	.card.var1.grow {
+		display: flex;
+		align-items: center;
+		img {
+			max-width: 45%;
+			margin-bottom: 0rem;
+		}
+		h2 {
+			padding: 0rem;
+			max-width: 19rem;
+			text-align: left;
+			margin: auto;
+		}
 	}
 
 	.card.var1.spot {
@@ -132,7 +140,7 @@
 	}
 
 /* ********************************************
-# card h1 h2 h3 adjustments
+# card h1 h2 h3 p adjustments
 ******************************************** */
 
 	h1.text-inverse {
@@ -150,11 +158,13 @@
 	.card.var3.AI h2 {
 		margin-top: 0rem;
 		margin-bottom: 3.5rem;
+		text-align: left;
 	}
 
 	h3 {
 		font-weight: 500;
 		font-size: 1.95rem;
+		text-align: left;
 		line-height: .9em;
 		padding-right: 2rem;
 		margin-bottom: .9rem;
@@ -163,6 +173,9 @@
 // 		}
 	}
 
+	.card.schedule p {
+		text-align: left;
+	}
 
 }
 
