@@ -26,92 +26,46 @@
 		display: grid;
 		grid-gap: 1.9rem;
 		grid-template-columns: repeat(4, 1fr);
-// 		grid-template-rows: repeat(10, 1fr);
-		grid-template-areas:
-			"a c c h"
-			"a c c h"
-			"a c c h"
-			"a c c h"
-			"a d f h"
-			"b d f h"
-			"b d f h"
-			"b e g g"
-			"b e g g"
-			"b e g g";
 	}
 
 	.card {
-		padding: 1.5rem 1.2rem .4rem;
+		padding: 1.5rem .7rem .5rem 1.5rem;
 	}
 
-/* ********************************************
-# grid areas
-******************************************** */
-
-	.card.var4 {
-		grid-area: a;
-	}
-	.card.AI {
-		grid-area: b;
-	}
-	.card.spot {
-		grid-area: c;
-	}
-	.card.graded {
-		grid-area: d;
-	}
-	.card.xl {
-		grid-area: e;
-	}
-	.card.clipped {
-		grid-area: f;
-	}
-	.card.grow {
-		grid-area: g;
-	}
-	.card.schedule {
-		grid-area: h;
-	}
 
 /* ********************************************
 # card image size & position tweaks
 ******************************************** */
 
-	// bottom left card
-	.card.var3.AI img {
-		max-width: 100%;
-	}
+	// top left card ——————————————————————————
+	.card.var4 {
+		padding: 4.2rem 1.9rem;
+		grid-column: 1 / 2;
+		grid-row: 1 / span 5;
 
-	// bottom right card
-	.card.var1.grow {
-		display: flex;
-		align-items: center;
 		img {
-			max-width: 45%;
-			margin-bottom: 0rem;
-		}
-		h2 {
-			padding: 0rem;
-			max-width: 19rem;
-			text-align: left;
-			margin: auto;
+			max-width: 100%;
+			margin: 1rem auto 0.5rem;
 		}
 	}
 
+	// top center card ——————————————————————————
 	.card.var1.spot {
 		padding: 4rem 1.9rem;
+		grid-column: 2 / 4;
+		grid-row: 1 / span 4;
+
+		img {
+			max-width: 40%;
+		}
 	}
 
-	.card.var1.spot img {
-		max-width: 40%;
-	}
-
-	.card.var3.clipped img {
-		max-width: 100%;
-	}
-
+	// top right card ——————————————————————————
 	.card.schedule {
 		padding-top: 3.2rem !important;
+		grid-column: 4;
+		grid-row: span 7;
+
 		img {
 			width: 100%;
 			height: 63% !important;
@@ -120,22 +74,60 @@
 		}
 	}
 
-	.card.var4 {
-		padding: 4.2rem 1.9rem;
-		img {
-			max-width: 100%;
-			margin: 1rem auto 0.5rem;
-		}
-	}
-
+	// center left card ——————————————————————————
 	.card.var5.graded {
-//		padding: 1rem 1rem;
-		overflow-x: hidden;
+		grid-column: 2 / 3;
+		grid-row: 5 / span 3;
+
 		img {
 			object-fit: cover;
 			object-position: left top;
-// 			width: 20rem;
 			height: 5.2rem !important;
+		}
+	}
+
+	// center right card ——————————————————————————
+	.card.var3.clipped {
+		grid-column: 3 / 4;
+		grid-row: 5 / span 3;
+		max-height: initial;
+		overflow-y: hidden;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	// bottom left card ——————————————————————————
+	.card.var3.AI {
+		grid-column: 1 / 2;
+		grid-row: 6 / span 5;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	// bottom center card ——————————————————————————
+	.card.var5.trio {
+		grid-column: 2 / 3;
+		grid-row: 8 / span 3;
+
+		img {
+			width: 80%;
+		}
+	}
+
+	// bottom right card ——————————————————————————
+	.card.var1.grow {
+		display: flex;
+		align-items: center;
+		grid-column: 3 / 5;
+		grid-row: 8 / span 3;
+
+		img {
+			max-width: 45%;
+			margin-bottom: 0rem;
 		}
 	}
 
@@ -146,38 +138,66 @@
 	h1.text-inverse {
 		font-weight: 500;
 		font-size: 3.8rem;
-		line-height: .9em;
-		margin-bottom: 1.5rem;
-		letter-spacing: -0.05em;
+		line-height: .95em;
+		margin-bottom: 1.4rem;
+		letter-spacing: -0.04em;
 	}
 
 	h2 {
 		font-size: 2.5rem;
+		max-width: 90%;
+		text-align: left;
+		letter-spacing: -0.09em;
 	}
 
 	.card.var3.AI h2 {
 		margin-top: 0rem;
 		margin-bottom: 3.5rem;
-		text-align: left;
+	}
+
+	.card.var1.grow h2 {
+		letter-spacing: -0.05em;
+		padding: 0rem;
+		max-width: 19rem;
+		margin: auto;
 	}
 
 	h3 {
 		font-weight: 500;
 		font-size: 1.95rem;
+		max-width: 98%;
 		text-align: left;
 		line-height: .9em;
 		padding-right: 2rem;
 		margin-bottom: .9rem;
-// 		&.tight {
-// 			margin-bottom: 0rem;
-// 		}
+		&.tight {
+			margin-bottom: .9rem;
+		}
+	}
+
+	.card.schedule h3 {
+		margin-left: 1rem;
 	}
 
 	.card.schedule p {
 		text-align: left;
 	}
 
+	.xl {
+// 		padding-bottom: .75rem;
+		font-size: 4rem;
+	}
+
+	.attribution {
+		font-size: 1rem;
+		padding-top: 0em;
+		position: absolute;
+		margin-left: 33rem;
+		bottom: 1.2rem;
+		text-align: center;
+	}
 }
+
 
 @media print,
 	(-webkit-min-device-pixel-ratio: 1.25),
