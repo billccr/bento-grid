@@ -53,6 +53,11 @@ p {
 	letter-spacing: -.05em;
 }
 
+.gr-than {
+	position: relative;
+	bottom: .3rem;
+}
+
 .text-inverse {
 	color: v.$white;
 }
@@ -72,7 +77,6 @@ p {
 	font-size: 11px;
 	text-align: center;
 	padding-top: 1.5em;
-
 	a {
 		color: v.$purple-dark;
 	}
