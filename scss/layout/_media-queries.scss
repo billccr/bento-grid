@@ -5,7 +5,7 @@
 
 @use '../abstracts/_variables' as v;
 
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 52rem) {
 
 // get rid of this when done    ---------------------
 // 	*, *::before, *::after {
@@ -15,17 +15,23 @@
 
 
 	body {
-		height: 100vh;
+// 		min-height: 100vh;
 		padding: 8vh 0;
 	}
 
+	.container {
+		height: 80vh;
+		height: 80svh;
+	}
+
 	main {
- 		height: 80vh;
+// 		height: 80svh;
 		max-width: 70rem;
 		margin: auto;
 		display: grid;
-		grid-gap: 2rem;
+		grid-gap: 2.2vw;		// was 2rem
 		grid-template-columns: repeat(4, 1fr);
+		position: relative;		// testing this
 	}
 
 	.card {
@@ -68,7 +74,7 @@
 
 		img {
 			width: 100%;
-			height: 61% !important;
+			height: 62% !important;  // this one getting too big when resizing window down
 			object-position: left top;
 			margin-right: -2rem !important;
 			margin-bottom: 1.2rem;
@@ -93,8 +99,9 @@
 	.card.var3.clipped {
 		grid-column: 3 / 4;
 		grid-row: 5 / span 3;
-		max-height: initial;
-		overflow-y: hidden;
+		overflow: hidden;
+		max-height: 15.3rem;
+		min-width: 12rem;
 
 		img {
 			max-width: 95%;
@@ -119,6 +126,7 @@
 		padding-top: 1rem;
 
 		img {
+//			min-height: 53%;	// testing this for fix
 			width: 80%;
 			margin-top: 2rem;
 		}
@@ -196,11 +204,9 @@
 
 	.attribution {
 		font-size: 1rem;
-		padding-top: 0em;
-		position: absolute;
-		margin-left: 33rem;
+		padding-top: 2.5em;
+		position: relative;
 		bottom: 1.2rem;
-		text-align: center;
 	}
 }
 
