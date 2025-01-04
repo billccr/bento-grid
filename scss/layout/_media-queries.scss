@@ -15,7 +15,7 @@
 
 
 	body {
-// 		min-height: 100vh;
+		min-height: 100vh;
 		padding: 8vh 0;
 	}
 
@@ -25,13 +25,11 @@
 	}
 
 	main {
-// 		height: 80svh;
 		max-width: 70rem;
 		margin: auto;
 		display: grid;
 		grid-gap: 2.2vw;		// was 2rem
 		grid-template-columns: repeat(4, 1fr);
-		position: relative;		// testing this
 	}
 
 	.card {
@@ -183,7 +181,7 @@
 		max-width: 98%;
 		text-align: left;
 		line-height: .9em;
-		padding-right: 2rem;
+// 		padding-right: 2rem;
 		margin-bottom: .9rem;
 		&.tight {
 			margin-bottom: 0rem;

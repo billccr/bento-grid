@@ -40,8 +40,6 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 
-### What I learned
-
 ### Useful resources
 
 - [DevDocs](https://www.devdocs.io) - reference for a variety of development languages

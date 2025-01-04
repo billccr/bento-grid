@@ -21,6 +21,8 @@ main {
 	display: grid;
 	grid-column: 1fr;
 	grid-gap: 1.9rem;
+	max-width: 35rem;
+	margin-inline: auto;
 }
 
 h1 {
