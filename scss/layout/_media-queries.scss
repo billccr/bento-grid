@@ -5,14 +5,7 @@
 
 @use '../abstracts/_variables' as v;
 
-@media only screen and (min-width: 52rem) {
-
-// get rid of this when done    ---------------------
-// 	*, *::before, *::after {
-// 		outline: 2px solid lime;
-// 		background: hsl( 120 100% 50% / .1 );
-// 	}
-
+@media only screen and (min-width: 55rem) {
 
 	body {
 		min-height: 100vh;
@@ -28,7 +21,7 @@
 		max-width: 70rem;
 		margin: auto;
 		display: grid;
-		grid-gap: 2.2vw;		// was 2rem
+		grid-gap: 2.2vw;
 		grid-template-columns: repeat(4, 1fr);
 	}
 
@@ -72,7 +65,7 @@
 
 		img {
 			width: 100%;
-			height: 62% !important;  // this one getting too big when resizing window down
+			height: 62% !important;
 			object-position: left top;
 			margin-right: -2rem !important;
 			margin-bottom: 1.2rem;
@@ -124,7 +117,6 @@
 		padding-top: 1rem;
 
 		img {
-//			min-height: 53%;	// testing this for fix
 			width: 80%;
 			margin-top: 2rem;
 		}
@@ -171,8 +163,10 @@
 	.card.var1.grow h2 {
 		letter-spacing: -0.05em;
 		padding: 0rem;
+		padding-left: 0.2rem;
 		max-width: 16rem;
 		margin: auto 0 auto auto;
+		align-self: flex-end;
 	}
 
 	h3 {
@@ -181,7 +175,6 @@
 		max-width: 98%;
 		text-align: left;
 		line-height: .9em;
-// 		padding-right: 2rem;
 		margin-bottom: .9rem;
 		&.tight {
 			margin-bottom: 0rem;
@@ -194,6 +187,8 @@
 
 	.card.schedule p {
 		text-align: left;
+		font-size: clamp(.8rem, 1.1rem, 1.2rem);
+		padding-right: 0.5rem;
 	}
 
 	.xl {

@@ -3,5 +3,3 @@
 *.xd
 
 .DS_Store
-assets/*
-css/*

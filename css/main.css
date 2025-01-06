@@ -1,0 +1,772 @@
+/* Document		gh/csstools/normalize.css v12.1.1
+ * ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+:where(html) {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+ * ========================================================================== */
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Edge, Firefox, and Safari.
+ */
+:where(h1) {
+  font-size: 2em;
+  margin-block-end: 0.67em;
+  margin-block-start: 0.67em;
+}
+
+/* Grouping content
+ * ========================================================================== */
+/**
+ * Remove the margin on nested lists in Chrome, Edge, and Safari.
+ */
+:where(dl, ol, ul) :where(dl, ol, ul) {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Correct the inheritance of border color in Firefox.
+ */
+:where(hr) {
+  box-sizing: content-box; /* 1 */
+  color: inherit; /* 2 */
+  height: 0; /* 1 */
+}
+
+/* Text-level semantics
+ * ========================================================================== */
+/**
+ * Add the correct text decoration in Safari.
+ */
+:where(abbr[title]) {
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+:where(b, strong) {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+:where(code, kbd, pre, samp) {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+:where(small) {
+  font-size: 80%;
+}
+
+/* Tabular data
+ * ========================================================================== */
+/**
+ * 1. Correct table border color in Chrome, Edge, and Safari.
+ * 2. Remove text indentation from table contents in Chrome, Edge, and Safari.
+ */
+:where(table) {
+  border-color: currentColor; /* 1 */
+  text-indent: 0; /* 2 */
+}
+
+/* Forms
+ * ========================================================================== */
+/**
+ * Remove the margin on controls in Safari.
+ */
+:where(button, input, select) {
+  margin: 0;
+}
+
+/**
+ * Remove the inheritance of text transform in Firefox.
+ */
+:where(button) {
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style buttons in iOS and Safari.
+ */
+:where(button, input:is([type=button i], [type=reset i], [type=submit i])) {
+  -webkit-appearance: button;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Edge, and Firefox.
+ */
+:where(progress) {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the inheritance of text transform in Firefox.
+ */
+:where(select) {
+  text-transform: none;
+}
+
+/**
+ * Remove the margin in Firefox and Safari.
+ */
+:where(textarea) {
+  margin: 0;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome, Edge, and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+:where(input[type=search i]) {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Safari.
+ */
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/**
+ * Remove the inner padding in Chrome, Edge, and Safari on macOS.
+ */
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style upload buttons in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/**
+ * Remove the inner border and padding of focus outlines in Firefox.
+ */
+:where(button, input:is([type=button i], [type=color i], [type=reset i], [type=submit i]))::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus outline styles unset by the previous rule in Firefox.
+ */
+:where(button, input:is([type=button i], [type=color i], [type=reset i], [type=submit i]))::-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Remove the additional :invalid styles in Firefox.
+ */
+:where(:-moz-ui-invalid) {
+  box-shadow: none;
+}
+
+/* Interactive
+ * ========================================================================== */
+/*
+ * Add the correct styles in Safari.
+ */
+:where(dialog) {
+  background-color: white;
+  border: solid;
+  color: black;
+  height: -moz-fit-content;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+:where(dialog:not([open])) {
+  display: none;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+:where(summary) {
+  display: list-item;
+}
+
+/* ==========================================================================
+	my additional resets
+   ========================================================================== */
+/* make sure padding applied to elements is added within their calculated dimensions */
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* make sure images behave fluidly */
+img {
+  object-fit: cover;
+  width: auto;
+  max-width: 100%;
+  height: auto !important;
+}
+
+/* ********************************************
+# variables
+******************************************** */
+/* ********************************************
+# typography
+******************************************** */
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 400;
+  src: url("../assets/fonts/static/DMSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 500;
+  src: url("../assets/fonts/static/DMSans-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-style: italic;
+  src: url("../assets/fonts/static/DMSans-MediumItalic.ttf") format("truetype");
+}
+p {
+  line-height: 1.1em;
+}
+
+.card em {
+  font-style: italic;
+}
+
+.card.var1.spot p {
+  color: hsl(31, 66%, 85%);
+  margin-bottom: 0.4em;
+}
+
+.card.var1.grow h2 {
+  padding: 0rem 1.5rem;
+}
+
+.card.var2 p {
+  text-align: center;
+  padding: 0 1em;
+}
+
+.xl {
+  display: block;
+  padding-bottom: 0.75rem;
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+
+.gr-than {
+  position: relative;
+  bottom: 0.3rem;
+}
+
+.text-inverse {
+  color: hsl(0, 0%, 100%);
+}
+
+.card.var3.AI h2 {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card.var4 em {
+  color: hsl(256, 67%, 59%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding-top: 1.5em;
+}
+.attribution a {
+  color: hsl(256, 67%, 59%);
+}
+
+/* ==========================================================================
+	 primary styles -- small device
+   ========================================================================== */
+body {
+  min-height: 100vh;
+  font-weight: 400;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  padding: 2rem 1rem;
+  background-color: hsl(0, 0%, 96%);
+}
+
+main {
+  display: grid;
+  grid-column: 1fr;
+  grid-gap: 1.9rem;
+  max-width: 35rem;
+  margin-inline: auto;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 2.8rem;
+  line-height: 0.85em;
+  margin-bottom: 1.5rem;
+}
+h1 .highlight {
+  color: hsl(39, 100%, 71%);
+}
+
+h1.text-inverse {
+  line-height: 0.95em;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 2rem;
+  letter-spacing: -0.05em;
+  line-height: 0.9em;
+}
+
+.card.quicker h2 {
+  margin: 0.8rem 0rem 0.5rem;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 1.6rem;
+  letter-spacing: -0.05em;
+  line-height: 1em;
+  margin-bottom: 0.9rem;
+}
+h3.tight {
+  margin-bottom: 0rem;
+}
+
+/* ********************************************
+# card cells
+******************************************** */
+.card {
+  padding: 1rem 1.3rem;
+  border-radius: 0.5rem;
+}
+.card.var1.spot {
+  background-color: hsl(256, 67%, 59%);
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+.card.var1.grow {
+  background-color: hsl(256, 67%, 59%);
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+.card.var2 {
+  background-color: hsl(254, 88%, 90%);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.card.var3 {
+  background-color: hsl(39, 100%, 71%);
+}
+.card.var3.clipped {
+  max-height: 13.6rem;
+  overflow-y: clip;
+}
+.card.var4 {
+  background-color: hsl(31, 66%, 93%);
+}
+.card.var5 {
+  background-color: hsl(0, 0%, 100%);
+}
+
+/* ********************************************
+# image placement & sizing
+******************************************** */
+.card.var1.spot img {
+  max-width: 60%;
+}
+
+.card.var1.grow img {
+  max-width: 73%;
+  margin-bottom: 2.2rem;
+}
+
+.card.var2.schedule img {
+  margin: 0.5rem 0 1rem;
+}
+
+.card.var3.clipped img {
+  max-width: 70%;
+}
+
+.card.var3.AI img {
+  max-width: 74%;
+}
+
+.card.var4 img {
+  max-width: 64%;
+  margin: 1rem 1rem 0.8rem;
+}
+
+.card.var5 img {
+  width: 58%;
+  padding: 0.5rem 0rem;
+}
+
+.card.var5.trio img {
+  margin-top: 1rem;
+}
+
+.card.var5.graded {
+  background: radial-gradient(hsl(280, 57%, 99%), hsl(0, 0%, 100%));
+  box-shadow: inset 0rem 1rem 3rem hsl(0, 0%, 100%);
+  padding: 1rem 1rem;
+}
+.card.var5.graded img {
+  width: 100%;
+}
+
+/* ==========================================================================
+   Media Queries for larger viewports
+   These override _custom.scss 'mobile first' styles
+   ========================================================================== */
+@media only screen and (min-width: 55rem) {
+  body {
+    min-height: 100vh;
+    padding: 8vh 0;
+  }
+  .container {
+    height: 80vh;
+    height: 80svh;
+  }
+  main {
+    max-width: 70rem;
+    margin: auto;
+    display: grid;
+    grid-gap: 2.2vw;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .card {
+    padding: 1.5rem 0.7rem 0.5rem 1.5rem;
+  }
+  /* ********************************************
+  # card image size & position tweaks
+  ******************************************** */
+  .card.var4 {
+    padding: 4.1rem 1.9rem;
+    grid-column: 1/2;
+    grid-row: 1/span 5;
+  }
+  .card.var4 img {
+    max-width: 100%;
+    margin: 1rem auto 0.5rem;
+  }
+  .card.var1.spot {
+    padding: 4rem 1.9rem;
+    grid-column: 2/4;
+    grid-row: 1/span 4;
+  }
+  .card.var1.spot img {
+    max-width: 40%;
+  }
+  .card.var2.schedule {
+    padding-top: 3.2rem !important;
+    grid-column: 4;
+    grid-row: span 7;
+  }
+  .card.var2.schedule img {
+    width: 100%;
+    height: 62% !important;
+    object-position: left top;
+    margin-right: -2rem !important;
+    margin-bottom: 1.2rem;
+  }
+  .card.var5.graded {
+    grid-column: 2/3;
+    grid-row: 5/span 3;
+    padding: 1.5rem 0.7rem 0.5rem 1.5rem;
+  }
+  .card.var5.graded img {
+    object-fit: cover;
+    object-position: left top;
+    height: 5rem !important;
+    padding: 0rem 0rem 1rem;
+  }
+  .card.var3.clipped {
+    grid-column: 3/4;
+    grid-row: 5/span 3;
+    overflow: hidden;
+    max-height: 15.3rem;
+    min-width: 12rem;
+  }
+  .card.var3.clipped img {
+    max-width: 95%;
+  }
+  .card.var3.AI {
+    grid-column: 1/2;
+    grid-row: 6/span 5;
+    padding-bottom: 1.1rem;
+  }
+  .card.var3.AI img {
+    max-width: 100%;
+  }
+  .card.var5.trio {
+    grid-column: 2/3;
+    grid-row: 8/span 3;
+    padding-top: 1rem;
+  }
+  .card.var5.trio img {
+    width: 80%;
+    margin-top: 2rem;
+  }
+  .card.var1.grow {
+    display: flex;
+    align-items: center;
+    grid-column: 3/5;
+    grid-row: 8/span 3;
+    padding: 1.5rem;
+  }
+  .card.var1.grow img {
+    max-width: 45%;
+    margin-bottom: 0rem;
+  }
+  /* ********************************************
+  # card h1 h2 h3 p adjustments
+  ******************************************** */
+  h1.text-inverse {
+    font-weight: 500;
+    font-size: 3.8rem;
+    line-height: 0.95em;
+    margin-bottom: 1.4rem;
+    letter-spacing: -0.04em;
+  }
+  h2 {
+    font-size: 2.5rem;
+    max-width: 90%;
+    text-align: left;
+    letter-spacing: -0.09em;
+  }
+  .card.var3.AI h2 {
+    margin-top: 0rem;
+    margin-bottom: 3.5rem;
+  }
+  .card.var1.grow h2 {
+    letter-spacing: -0.05em;
+    padding: 0rem;
+    padding-left: 0.2rem;
+    max-width: 16rem;
+    margin: auto 0 auto auto;
+    align-self: flex-end;
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 1.95rem;
+    max-width: 98%;
+    text-align: left;
+    line-height: 0.9em;
+    margin-bottom: 0.9rem;
+  }
+  h3.tight {
+    margin-bottom: 0rem;
+  }
+  .card.schedule h3 {
+    margin-left: 1rem;
+  }
+  .card.schedule p {
+    text-align: left;
+    font-size: 1.1rem;
+    padding-right: 0.5rem;
+  }
+  .xl {
+    font-size: 3.8rem;
+  }
+  .attribution {
+    font-size: 1rem;
+    padding-top: 2.5em;
+    position: relative;
+    bottom: 1.2rem;
+  }
+}
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+/* ==========================================================================
+	 H5BP Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers
+ */
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *	  causes content to wrap 1 word per line:
+ *	  https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *	  `contenteditable` attribute is included anywhere else in the document.
+ *	  Otherwise it causes space to appear at the top and bottom of elements
+ *	  that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *	  `:before` to contain the top-margins of child elements.
+ */
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/*  ==========================================================================
+	Print styles.
+	Inlined to avoid the additional HTTP request:
+	https://www.phpied.com/delay-loading-your-print-css/
+	========================================================================== */
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/* call normalize.css first in html head or add to vendor */
+
+/*# sourceMappingURL=main.css.map */
